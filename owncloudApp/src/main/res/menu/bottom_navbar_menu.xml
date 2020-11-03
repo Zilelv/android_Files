@@ -16,6 +16,7 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
+<!-- Files.fm made Links option as gone because not used in our server -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_all_files"
@@ -32,5 +33,6 @@
     <item
         android:id="@+id/nav_shared_by_link_files"
         android:icon="@drawable/ic_shared_by_link"
-        android:title="@string/bottom_nav_links" />
+        android:title="@string/bottom_nav_links"
+        android:visible="false" />
 </menu>

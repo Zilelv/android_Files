@@ -33,6 +33,7 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -255,11 +256,52 @@ public class FileListListAdapter extends BaseAdapter implements ListAdapter {
                         @Override
                         public void onClick(View v) {
 
-                            PopupMenu menu = new PopupMenu(mContext, v);
-                            menu.getMenuInflater()
-                                    .inflate(R.menu.each_file_actions_menu, menu.getMenu());
-                            menu.show();
-                            menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                            PopupMenu popupMenu = new PopupMenu(mContext, v);
+                            popupMenu.getMenuInflater()
+                                    .inflate(R.menu.each_file_actions_menu, popupMenu.getMenu());
+                            Menu menu = popupMenu.getMenu();
+                            if (finalFile.isAvailableOffline()) {
+                                menu.findItem(R.id.action_set_available_offline).setVisible(false);
+                            } else {
+                                menu.findItem(R.id.action_unset_available_offline).setVisible(false);
+                            }
+
+                            final FileDownloaderBinder downloaderBinder =
+                                    mTransferServiceGetter.getFileDownloaderBinder();
+                            final FileUploaderBinder uploaderBinder =
+                                    mTransferServiceGetter.getFileUploaderBinder();
+                            final OperationsServiceBinder opsBinder =
+                                    mTransferServiceGetter.getOperationsServiceBinder();
+
+                            if (opsBinder != null && opsBinder.isSynchronizing(mAccount, finalFile)) {
+                                //syncing
+                                menu.findItem(R.id.action_cancel_sync).setVisible(true);
+                                menu.findItem(R.id.action_download_file).setVisible(false);
+                                menu.findItem(R.id.action_sync_file).setVisible(false);
+                            } else if (downloaderBinder != null && downloaderBinder.isDownloading(mAccount, finalFile)) {
+                                // downloading
+                                menu.findItem(R.id.action_cancel_sync).setVisible(true);
+                                menu.findItem(R.id.action_download_file).setVisible(false);
+                                menu.findItem(R.id.action_sync_file).setVisible(false);
+                            } else if (uploaderBinder != null && uploaderBinder.isUploading(mAccount, finalFile)) {
+                                // uploading
+                                menu.findItem(R.id.action_cancel_sync).setVisible(true);
+                                menu.findItem(R.id.action_download_file).setVisible(false);
+                                menu.findItem(R.id.action_sync_file).setVisible(false);
+                            } else if (finalFile.isDown()){
+                                menu.findItem(R.id.action_download_file).setVisible(false);
+                                menu.findItem(R.id.action_sync_file).setVisible(false);
+                                menu.findItem(R.id.action_cancel_sync).setVisible(false);
+                            } else {
+                                menu.findItem(R.id.action_cancel_sync).setVisible(false);
+                            }
+                            if (finalFile.isFolder()) {
+                                menu.findItem(R.id.action_send_file).setVisible(false);
+                            } else {
+                                menu.findItem(R.id.action_send_file).setVisible(true);
+                            }
+                            popupMenu.show();
+                            popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                                 @Override
                                 public boolean onMenuItemClick(MenuItem menuItem) {
                                     return mAdapterCallback.onMethodCallback(finalFile, menuItem);
@@ -293,9 +335,11 @@ public class FileListListAdapter extends BaseAdapter implements ListAdapter {
 
             // For all Views
             setIconPinAcordingToFilesLocalState(localStateView, file);
-
+            //Files.fm added button for each file and made the only button or checkbox is seen
             final ImageView checkBoxV = view.findViewById(R.id.custom_checkbox);
+            final ImageView fileMenu = view.findViewById(R.id.file_menu);
             checkBoxV.setVisibility(View.GONE);
+            fileMenu.setVisibility(View.VISIBLE);
             view.setBackgroundColor(Color.WHITE);
 
             AbsListView parentList = (AbsListView) parent;
@@ -313,6 +357,7 @@ public class FileListListAdapter extends BaseAdapter implements ListAdapter {
                             R.drawable.ic_checkbox_blank_outline);
                 }
                 checkBoxV.setVisibility(View.VISIBLE);
+                fileMenu.setVisibility(View.GONE);
             }
 
             if (file.isFolder()) {

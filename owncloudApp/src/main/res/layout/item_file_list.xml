@@ -114,10 +114,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/options_constraint_layout"
         android:layout_width="49dp"
-        android:layout_height="23dp"
+        android:layout_height="40dp"
         android:layout_marginStart="4dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/options_constraint_layout1"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/info_constraint_layout"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.51">
@@ -128,53 +129,39 @@
             android:layout_height="22dp"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginEnd="5dp"
             android:src="@drawable/ic_shared_by_link"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/custom_checkbox"
-            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.333" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/custom_checkbox"
             android:layout_width="22dp"
             android:layout_height="24dp"
-            android:layout_gravity="center_vertical"
             android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
             android:layout_toEndOf="@id/sharedIcon"
             android:src="@drawable/ic_checkbox_blank_outline"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/file_menu"
             app:layout_constraintStart_toEndOf="@+id/sharedIcon"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/options_constraint_layout1"
-        android:layout_width="23dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/options_constraint_layout"
-        app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/file_menu"
-            android:layout_width="21dp"
-            android:layout_height="21dp"
+            android:layout_width="19dp"
+            android:layout_height="40dp"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/dots"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/dots_big"
             app:tint="#777474"
             tools:visibility="visible" />
 
