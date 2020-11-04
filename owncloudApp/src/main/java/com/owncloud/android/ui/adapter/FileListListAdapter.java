@@ -310,6 +310,31 @@ public class FileListListAdapter extends BaseAdapter implements ListAdapter {
                         }
                     });
 
+                    //Files.fm added button for each file and made the only button or checkbox is seen
+                    final ImageView checkBoxV = view.findViewById(R.id.custom_checkbox);
+                    final ImageView fileMenu = view.findViewById(R.id.file_menu);
+                    checkBoxV.setVisibility(View.GONE);
+                    fileMenu.setVisibility(View.VISIBLE);
+                    view.setBackgroundColor(Color.WHITE);
+
+                    AbsListView parentList = (AbsListView) parent;
+                    if (parentList.getChoiceMode() != AbsListView.CHOICE_MODE_NONE &&
+                            parentList.getCheckedItemCount() > 0
+                    ) {
+                        if (parentList.isItemChecked(position)) {
+                            view.setBackgroundColor(mContext.getResources().getColor(
+                                    R.color.selected_item_background));
+                            checkBoxV.setImageResource(
+                                    R.drawable.ic_checkbox_marked);
+                        } else {
+                            view.setBackgroundColor(Color.WHITE);
+                            checkBoxV.setImageResource(
+                                    R.drawable.ic_checkbox_blank_outline);
+                        }
+                        checkBoxV.setVisibility(View.VISIBLE);
+                        fileMenu.setVisibility(View.GONE);
+                    }
+
                 case GRID_ITEM:
                     // filename
                     fileName = view.findViewById(R.id.Filename);
@@ -335,11 +360,8 @@ public class FileListListAdapter extends BaseAdapter implements ListAdapter {
 
             // For all Views
             setIconPinAcordingToFilesLocalState(localStateView, file);
-            //Files.fm added button for each file and made the only button or checkbox is seen
             final ImageView checkBoxV = view.findViewById(R.id.custom_checkbox);
-            final ImageView fileMenu = view.findViewById(R.id.file_menu);
             checkBoxV.setVisibility(View.GONE);
-            fileMenu.setVisibility(View.VISIBLE);
             view.setBackgroundColor(Color.WHITE);
 
             AbsListView parentList = (AbsListView) parent;
@@ -357,7 +379,6 @@ public class FileListListAdapter extends BaseAdapter implements ListAdapter {
                             R.drawable.ic_checkbox_blank_outline);
                 }
                 checkBoxV.setVisibility(View.VISIBLE);
-                fileMenu.setVisibility(View.GONE);
             }
 
             if (file.isFolder()) {

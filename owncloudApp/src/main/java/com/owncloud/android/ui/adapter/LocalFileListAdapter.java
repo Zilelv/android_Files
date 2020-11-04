@@ -136,8 +136,6 @@ public class LocalFileListAdapter extends BaseAdapter implements ListAdapter {
             TextView fileSizeSeparatorTV = view.findViewById(R.id.file_list_separator);
             TextView lastModTV = view.findViewById(R.id.file_list_last_mod);
             ImageView checkBoxV = view.findViewById(R.id.custom_checkbox);
-            //Files.fm added button for each file and made the only button or checkbox is seen
-            ImageView fileMenu = view.findViewById(R.id.file_menu);
             lastModTV.setVisibility(View.VISIBLE);
             lastModTV.setText(DisplayUtils.getRelativeTimestamp(mContext, file.lastModified()));
 
@@ -149,10 +147,8 @@ public class LocalFileListAdapter extends BaseAdapter implements ListAdapter {
                 parentList = (ListView) parent;
                 if (parentList.getChoiceMode() == ListView.CHOICE_MODE_NONE) {
                     checkBoxV.setVisibility(View.GONE);
-                    fileMenu.setVisibility(View.VISIBLE);
                 } else {
                     checkBoxV.setVisibility(View.VISIBLE);
-                    fileMenu.setVisibility(View.GONE);
                 }
 
                 // get Thumbnail if file is image
@@ -190,7 +186,6 @@ public class LocalFileListAdapter extends BaseAdapter implements ListAdapter {
                 fileSizeSeparatorTV.setVisibility(View.GONE);
                 fileSizeTV.setVisibility(View.GONE);
                 checkBoxV.setVisibility(View.GONE);
-                fileMenu.setVisibility(View.VISIBLE);
             }
 
             // not GONE; the alignment changes; ugly way to keep it
