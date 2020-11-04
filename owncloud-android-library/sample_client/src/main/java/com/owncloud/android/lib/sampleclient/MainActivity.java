@@ -22,7 +22,7 @@
  *
  */
 
-package com.owncloud.android.lib.sampleclient;
+package com.filesfm.android.lib.sampleclient;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -38,19 +38,19 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.owncloud.android.lib.common.OwnCloudClient;
-import com.owncloud.android.lib.common.OwnCloudClientFactory;
-import com.owncloud.android.lib.common.SingleSessionManager;
-import com.owncloud.android.lib.common.authentication.OwnCloudCredentialsFactory;
-import com.owncloud.android.lib.common.network.OnDatatransferProgressListener;
-import com.owncloud.android.lib.common.operations.OnRemoteOperationListener;
-import com.owncloud.android.lib.common.operations.RemoteOperation;
-import com.owncloud.android.lib.common.operations.RemoteOperationResult;
-import com.owncloud.android.lib.resources.files.DownloadRemoteFileOperation;
-import com.owncloud.android.lib.resources.files.ReadRemoteFolderOperation;
-import com.owncloud.android.lib.resources.files.RemoteFile;
-import com.owncloud.android.lib.resources.files.RemoveRemoteFileOperation;
-import com.owncloud.android.lib.resources.files.UploadRemoteFileOperation;
+import com.filesfm.android.lib.common.OwnCloudClient;
+import com.filesfm.android.lib.common.OwnCloudClientFactory;
+import com.filesfm.android.lib.common.SingleSessionManager;
+import com.filesfm.android.lib.common.authentication.OwnCloudCredentialsFactory;
+import com.filesfm.android.lib.common.network.OnDatatransferProgressListener;
+import com.filesfm.android.lib.common.operations.OnRemoteOperationListener;
+import com.filesfm.android.lib.common.operations.RemoteOperation;
+import com.filesfm.android.lib.common.operations.RemoteOperationResult;
+import com.filesfm.android.lib.resources.files.DownloadRemoteFileOperation;
+import com.filesfm.android.lib.resources.files.ReadRemoteFolderOperation;
+import com.filesfm.android.lib.resources.files.RemoteFile;
+import com.filesfm.android.lib.resources.files.RemoveRemoteFileOperation;
+import com.filesfm.android.lib.resources.files.UploadRemoteFileOperation;
 import info.hannes.timber.DebugTree;
 import timber.log.Timber;
 
@@ -212,7 +212,7 @@ public class MainActivity extends Activity implements OnRemoteOperationListener,
         } else if (operation instanceof ReadRemoteFolderOperation) {
             onSuccessfulRefresh(result);
 
-        } else if (operation instanceof com.owncloud.android.lib.resources.files.UploadRemoteFileOperation) {
+        } else if (operation instanceof com.filesfm.android.lib.resources.files.UploadRemoteFileOperation) {
             onSuccessfulUpload();
 
         } else if (operation instanceof RemoveRemoteFileOperation) {

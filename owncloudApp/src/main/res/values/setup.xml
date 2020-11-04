@@ -5,12 +5,12 @@
     <!-- App name  and other strings-->
     <string name="app_name" formatted="false">Files.fm ownCloud client</string>
     <string name="account_type" formatted="false">files.fm</string>    <!-- better if was a domain name; but changing it now would require migrate accounts when the app is updated -->
-    <string name="authority" formatted="false">files.fm</string>
-    <string name="document_provider_authority" formatted="false">org.owncloud.documents</string>
-    <string name="file_provider_authority" formatted="false">org.owncloud.files</string>
-    <string name="search_suggest_authority" formatted="false">org.owncloud.search.users_and_groups</string>
-    <string name="search_suggest_intent_action" formatted="false">org.owncloud.search.users_and_groups.action.SHARE_WITH</string>
-    <string name="db_file" formatted="false">owncloud.db</string>
+    <string name="authority" formatted="false">filesfm</string>
+    <string name="document_provider_authority" formatted="false">org.filesfm.documents</string>
+    <string name="file_provider_authority" formatted="false">org.filesfm.files</string>
+    <string name="search_suggest_authority" formatted="false">org.filesfm.search.users_and_groups</string>
+    <string name="search_suggest_intent_action" formatted="false">org.filesfm.search.users_and_groups.action.SHARE_WITH</string>
+    <string name="db_file" formatted="false">filesfm.db</string>
     <string name="db_name" formatted="false">Files.fm</string>
     <string name="data_folder" formatted="false">files.fm</string>
     <string name="log_name" formatted="false">files.fm</string>
