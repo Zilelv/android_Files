@@ -54,6 +54,14 @@ import com.filesfm.android.testutil.OC_AUTH_TOKEN_TYPE
 import com.filesfm.android.testutil.OC_BASIC_PASSWORD
 import com.filesfm.android.testutil.OC_BASIC_USERNAME
 import com.filesfm.android.testutil.OC_SERVER_INFO
+import com.filesfm.android.utils.assertVisibility
+import com.filesfm.android.utils.click
+import com.filesfm.android.utils.isDisplayed
+import com.filesfm.android.utils.isEnabled
+import com.filesfm.android.utils.isFocusable
+import com.filesfm.android.utils.replaceText
+import com.filesfm.android.utils.typeText
+import com.filesfm.android.utils.withText
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.unmockkAll

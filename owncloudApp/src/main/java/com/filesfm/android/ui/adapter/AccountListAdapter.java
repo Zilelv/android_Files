@@ -91,7 +91,7 @@ public class AccountListAdapter extends ArrayAdapter<AccountListItem> {
                     viewHolder.nameViewItem.setText(oca.getDisplayName());
                     //Files.fm moved to here to get OwnCloudAccount display name
                     viewHolder.accountViewItem.setText(
-                            DisplayUtils.convertIdn("file.fm/" + oca.getDisplayName(), false)
+                            DisplayUtils.convertIdn("files.fm/" + oca.getDisplayName(), false)
                     );
                 } catch (Exception e) {
                     Timber.w("Account not found right after being read :\\ ; using account name instead of display " +

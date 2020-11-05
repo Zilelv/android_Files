@@ -44,7 +44,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/info_constraint_layout"
         android:layout_width="0dp"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/standard_quarter_margin"
         android:layout_marginBottom="@dimen/standard_quarter_margin"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,8 +113,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/options_constraint_layout"
-        android:layout_width="49dp"
-        android:layout_height="40dp"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -140,8 +140,8 @@
 
         <ImageView
             android:id="@+id/custom_checkbox"
-            android:layout_width="22dp"
-            android:layout_height="24dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_marginStart="2dp"
             android:layout_toEndOf="@id/sharedIcon"
             android:src="@drawable/ic_checkbox_blank_outline"
@@ -152,8 +152,8 @@
 
         <ImageView
             android:id="@+id/file_menu"
-            android:layout_width="19dp"
-            android:layout_height="40dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -161,8 +161,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/dots_big"
-            app:tint="#777474"
+            app:srcCompat="@drawable/ic_dots_vertical"
             tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

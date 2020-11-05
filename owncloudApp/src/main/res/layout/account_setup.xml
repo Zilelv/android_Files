@@ -222,11 +222,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:contentDescription="@string/auth_register"
+                    android:contentDescription="@string/auth_register_new"
                     android:gravity="center"
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp"
-                    android:text="@string/auth_register"
+                    android:text="@string/auth_register_new"
                     android:textColor="@color/login_text_color" />
             </LinearLayout>
         </LinearLayout>

@@ -99,6 +99,7 @@
     <string name="auth_username">Username</string>
     <string name="auth_password">Password</string>
     <string name="auth_register">New to %1$s?</string>
+    <string name="auth_register_new">Create new Files.fm account</string>
     <string name="sync_string_files">Files</string>
     <string name="setup_btn_login">Log in</string>
     <string name="uploader_btn_upload_text">Upload</string>
@@ -612,4 +613,14 @@
 
     <string name="supports_oauth2_error">It was not possible to know if OAuth2 is supported</string>
     <string name="get_base_url_error">It was not possible to know the server base url</string>
+
+
+    <string name="menu_item_sort_by_name_a_z">A - Z</string>
+    <string name="menu_item_sort_by_name_z_a">Z - A</string>
+    <string name="menu_item_sort_by_date_newest_first">Newest first</string>
+    <string name="menu_item_sort_by_date_oldest_first">Oldest first</string>
+    <string name="menu_item_sort_by_size_biggest_first">Biggest first</string>
+    <string name="menu_item_sort_by_size_smallest_first">Smallest first</string>
+    <string name="offline_mode">No internet connection</string>
+
 </resources>
