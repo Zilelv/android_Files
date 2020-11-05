@@ -191,4 +191,6 @@
 
     </FrameLayout>
 
+    <include layout="@layout/info_box"/>
+
 </com.google.android.material.appbar.AppBarLayout>
