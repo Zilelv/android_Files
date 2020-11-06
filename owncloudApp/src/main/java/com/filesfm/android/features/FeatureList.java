@@ -55,11 +55,11 @@ public class FeatureList {
             new FeatureItem(R.drawable.whats_new_camera_uploads, R.string.welcome_feature_4_title,
                     R.string.welcome_feature_4_text, DEFAULT_WIZARD_VERSION_NAME, INDIFFERENT, SHOW_ON_FIRST_RUN),
             new FeatureItem(R.drawable.whats_new_video_streaming, R.string.welcome_feature_5_title,
-                    R.string.welcome_feature_5_text, DEFAULT_WIZARD_VERSION_NAME, INDIFFERENT, SHOW_ON_FIRST_RUN),
-            new FeatureItem(R.drawable.whats_new_nav_bar, R.string.welcome_feature_6_title,
-                    R.string.welcome_feature_6_text, RELEASE_2_15_0, INDIFFERENT, SHOW_ON_UPGRADE),
-            new FeatureItem(R.drawable.whats_new_oidc, R.string.welcome_feature_7_title,
-                    R.string.welcome_feature_7_text, RELEASE_2_15_0, INDIFFERENT, SHOW_ON_UPGRADE)
+                    R.string.welcome_feature_5_text, DEFAULT_WIZARD_VERSION_NAME, INDIFFERENT, SHOW_ON_FIRST_RUN)
+//            new FeatureItem(R.drawable.whats_new_nav_bar, R.string.welcome_feature_6_title,
+//                    R.string.welcome_feature_6_text, RELEASE_2_15_0, INDIFFERENT, SHOW_ON_UPGRADE),
+//            new FeatureItem(R.drawable.whats_new_oidc, R.string.welcome_feature_7_title,
+//                    R.string.welcome_feature_7_text, RELEASE_2_15_0, INDIFFERENT, SHOW_ON_UPGRADE)
     };
 
     static public FeatureItem[] get() {
