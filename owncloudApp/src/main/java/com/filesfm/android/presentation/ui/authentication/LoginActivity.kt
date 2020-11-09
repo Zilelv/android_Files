@@ -611,6 +611,7 @@ class LoginActivity : AppCompatActivity(), SslUntrustedCertDialog.OnSslUntrusted
         welcome_link.run {
             if (contextProvider.getBoolean(R.bool.show_welcome_link)) {
                 visibility = VISIBLE
+                //Files.fm changed text on login page, old: text = String.format(getString(R.string.auth_register), getString(R.string.app_name))
                 text = getString(R.string.auth_register_new)
                 setOnClickListener {
                     val openWelcomeLinkIntent =
