@@ -1810,7 +1810,7 @@ class FileDisplayActivity : FileActivity(), FileFragment.ContainerActivity, OnEn
         private const val KEY_UPLOAD_HELPER = "FILE_UPLOAD_HELPER"
         private const val KEY_FILE_LIST_OPTION = "FILE_LIST_OPTION"
 
-        const val ACTION_DETAILS = "com.owncloud.android.ui.activity.action.DETAILS"
+        const val ACTION_DETAILS = "com.filesfm.android.ui.activity.action.DETAILS"
 
         const val REQUEST_CODE__SELECT_CONTENT_FROM_APPS = REQUEST_CODE__LAST_SHARED + 1
         const val REQUEST_CODE__MOVE_FILES = REQUEST_CODE__LAST_SHARED + 2

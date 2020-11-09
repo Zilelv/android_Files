@@ -99,7 +99,7 @@ public class OCFileListFragment extends ExtendedListFragment implements
         SearchView.OnQueryTextListener, View.OnFocusChangeListener, AdapterCallback {
 
     private static final String MY_PACKAGE = OCFileListFragment.class.getPackage() != null ?
-            OCFileListFragment.class.getPackage().getName() : "com.owncloud.android.ui.fragment";
+            OCFileListFragment.class.getPackage().getName() : "com.filesfm.android.ui.fragment";
 
     private final static String ARG_ALLOW_CONTEXTUAL_MODE = MY_PACKAGE + ".ALLOW_CONTEXTUAL";
     private final static String ARG_HIDE_FAB = MY_PACKAGE + ".HIDE_FAB";

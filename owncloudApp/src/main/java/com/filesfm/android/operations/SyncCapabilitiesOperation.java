@@ -69,8 +69,8 @@ public class SyncCapabilitiesOperation extends SyncOperation<RemoteCapability> {
 
         /// save data - OC version
         // need to save separately version in AccountManager, due to bad dependency in
-        // library: com.owncloud.android.lib.common.accounts.AccountUtils#getCredentialsForAccount(...)
-        // and com.owncloud.android.lib.common.accounts.AccountUtils#getServerVersionForAccount(...)
+        // library: com.filesfm.android.lib.common.accounts.AccountUtils#getCredentialsForAccount(...)
+        // and com.filesfm.android.lib.common.accounts.AccountUtils#getServerVersionForAccount(...)
         if (serverVersion != null) {
             AccountManager accountMngr = AccountManager.get(MainApp.Companion.getAppContext());
             accountMngr.setUserData(

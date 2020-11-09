@@ -69,10 +69,10 @@ import timber.log.Timber;
 public class FileActivity extends DrawerActivity
         implements OnRemoteOperationListener, ComponentsGetter, SslUntrustedCertDialog.OnSslUntrustedCertListener {
 
-    public static final String EXTRA_FILE = "com.owncloud.android.ui.activity.FILE";
-    public static final String EXTRA_ACCOUNT = "com.owncloud.android.ui.activity.ACCOUNT";
+    public static final String EXTRA_FILE = "com.filesfm.android.ui.activity.FILE";
+    public static final String EXTRA_ACCOUNT = "com.filesfm.android.ui.activity.ACCOUNT";
     public static final String EXTRA_FROM_NOTIFICATION =
-            "com.owncloud.android.ui.activity.FROM_NOTIFICATION";
+            "com.filesfm.android.ui.activity.FROM_NOTIFICATION";
     public static final String EXTRA_FILE_LIST_OPTION = "EXTRA_FILE_LIST_OPTION";
 
     private static final String KEY_WAITING_FOR_OP_ID = "WAITING_FOR_OP_ID";

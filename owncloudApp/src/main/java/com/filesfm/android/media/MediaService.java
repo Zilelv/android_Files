@@ -63,7 +63,7 @@ public class MediaService extends Service implements OnCompletionListener, OnPre
         OnErrorListener, AudioManager.OnAudioFocusChangeListener {
 
     private static final String MY_PACKAGE = MediaService.class.getPackage() != null ?
-            MediaService.class.getPackage().getName() : "com.owncloud.android.media";
+            MediaService.class.getPackage().getName() : "com.filesfm.android.media";
 
     /// Intent actions that we are prepared to handle
     public static final String ACTION_PLAY_FILE = MY_PACKAGE + ".action.PLAY_FILE";

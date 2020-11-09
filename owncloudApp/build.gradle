@@ -88,10 +88,10 @@ android {
         minSdkVersion sdkMinVersion
         targetSdkVersion sdkTargetVersion
 
-        testInstrumentationRunner "com.owncloud.android.utils.OCTestAndroidJUnitRunner"
+        testInstrumentationRunner "com.filesfm.android.utils.OCTestAndroidJUnitRunner"
 
         versionCode = 21500300
-        versionName = "2.15.8"
+        versionName = "2.15.11"
 
         buildConfigField "String", gitRemote, "\"" + getGitOriginRemote() + "\""
         buildConfigField "String", commitSHA1, "\"" + getLatestGitHash() + "\""
@@ -186,7 +186,7 @@ def setOutputFileName(variant, appName, callerProject) {
     if (appName) {
         newName += appName
     } else {
-        newName += "owncloud"
+        newName += "filesfm-oc"
     }
 
     def versionName = "$variant.mergedFlavor.versionName"

@@ -15,7 +15,7 @@
     <string name="data_folder" formatted="false">files.fm</string>
     <string name="log_name" formatted="false">files.fm</string>
     <string name="default_display_name_for_root_folder" formatted="true">Files.fm owncloud client</string>
-    <string name="user_agent">Mozilla/5.0 (Android) ownCloud-android/%1$s</string>
+    <string name="user_agent">Mozilla/5.0 (Android) filesfm-oc-android/%1$s</string>
     <string name="default_server_name">webdav.failiem.lv</string>
 
     <!-- URLs and flags related -->
@@ -64,7 +64,7 @@
     <bool name="help_enabled">true</bool>
     <bool name="sync_calendar_contacts_enabled">false</bool>
     <bool name="imprint_enabled">false</bool>
-    <bool name="recommend_enabled">true</bool>
+    <bool name="recommend_enabled">false</bool>
     <bool name="feedback_enabled">true</bool>
     <bool name="privacy_policy_enabled">true</bool>
     <bool name="wizard_enabled">true</bool>
@@ -97,7 +97,7 @@
     <string name="oauth2_client_secret">dInFYGV33xKzhbRmpqQltYNdfLdJIfJ9L5ISoKhNoT9qZftpdWSP71VrpGR9pmoD</string>
 
     <!-- To enable/disable app rate feature -->
-    <bool name="enable_rate_me_feature">true</bool>
+    <bool name="enable_rate_me_feature">false</bool>
 
     <!-- Login background -->
     <bool name="use_login_background_image">false</bool>
